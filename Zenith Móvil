@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153d2b">
+  <meta name="description" content="Zenith Móvil: teléfonos, electrónica y electrodomésticos con pedidos por WhatsApp y entrega en Honduras.">
+  <title>Zenith Móvil | Tienda en línea</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Zenith Móvil inicio">
+      <span class="brand-mark">ZM</span>
+      <span><strong>Zenith Móvil</strong><small>Tu tecnología, más cerca</small></span>
+    </a>
+    <button id="cart-open" class="cart-button" aria-label="Abrir carrito">🛒 <span>Carrito</span> <b id="cart-count">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">TECNOLOGÍA • HOGAR • ACCESORIOS</p>
+        <h1>Encuentra tu próximo favorito.</h1>
+        <p>Explora nuestros productos y realiza tu pedido de forma sencilla. Atención por WhatsApp y entregas coordinadas en Honduras.</p>
+        <a class="primary-link" href="#catalogo">Ver productos <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="phone-art"><div class="phone-camera"></div><div class="phone-screen">ZM</div></div>
+        <div class="hero-tag">Ofertas<br><b>especiales</b></div>
+      </div>
+    </section>
+
+    <section class="trust-row" aria-label="Beneficios">
+      <div><span>✓</span><p><b>Compra fácil</b><small>Agrega al carrito</small></p></div>
+      <div><span>↗</span><p><b>Pedido directo</b><small>WhatsApp disponible</small></p></div>
+      <div><span>⌂</span><p><b>Entrega coordinada</b><small>Consulta cobertura</small></p></div>
+    </section>
+
+    <section id="catalogo" class="catalog-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">CATÁLOGO</p><h2>Productos destacados</h2></div>
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Buscar producto..." aria-label="Buscar producto"></label>
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="Todos">Todos</button>
+        <button class="filter" data-category="Teléfonos">Teléfonos</button>
+        <button class="filter" data-category="Electrodomésticos">Electrodomésticos</button>
+        <button class="filter" data-category="Electrónica">Electrónica</button>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+      <p class="demo-note">Precios y productos de demostración: edita el archivo <code>app.js</code> antes de publicar la tienda.</p>
+    </section>
+
+    <section class="payment-section">
+      <div><p class="eyebrow">FORMAS DE PAGO</p><h2>Pago por transferencia o depósito</h2><p>Al confirmar tu pedido, te compartiremos los datos de pago por WhatsApp. Realiza el depósito únicamente después de verificar los datos oficiales de Zenith Móvil.</p></div>
+      <div class="payment-card"><span class="payment-icon">₱</span><div><b>Transferencia bancaria</b><small>Solicita los datos de cuenta por WhatsApp.</small></div><div class="payment-divider"></div><div><b>Depósito inicial</b><small>Confirma el monto y las condiciones antes de pagar.</small></div></div>
+    </section>
+
+    <section class="delivery-section"><div class="delivery-icon">📦</div><div><h2>¿Necesitas entrega?</h2><p>Indica tu ciudad, departamento y dirección de referencia al realizar tu pedido. La cobertura, el costo y el tiempo de entrega se confirman antes del pago.</p></div></section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#"><span class="brand-mark">ZM</span><span><strong>Zenith Móvil</strong><small>Tu tecnología, más cerca</small></span></a>
+    <p>Atención en línea · Honduras</p>
+    <small>© <span id="year"></span> Zenith Móvil. Todos los derechos reservados.</small>
+  </footer>
+
+  <div id="cart-backdrop" class="backdrop hidden"></div>
+  <aside id="cart-panel" class="cart-panel" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow">TU COMPRA</p><h2>Carrito</h2></div><button id="cart-close" class="icon-button" aria-label="Cerrar carrito">✕</button></div>
+    <div id="cart-items" class="cart-items"><p class="empty-cart">Tu carrito está vacío.</p></div>
+    <div class="cart-bottom">
+      <div class="cart-total"><span>Total estimado</span><strong id="cart-total">L 0</strong></div>
+      <p class="small-note">El total final, envío y disponibilidad se confirmarán por WhatsApp.</p>
+      <form id="checkout-form">
+        <label>Nombre completo<input name="customer" required placeholder="Tu nombre"></label>
+        <label>Ciudad y departamento<input name="location" required placeholder="Ej. Tegucigalpa, F.M."></label>
+        <label>Dirección o referencia<textarea name="address" rows="2" required placeholder="Colonia, calle y punto de referencia"></textarea></label>
+        <button type="submit" class="primary-button">Enviar pedido por WhatsApp</button>
+      </form>
+      <button id="clear-cart" class="text-button">Vaciar carrito</button>
+    </div>
+  </aside>
+  <script src="app.js"></script>
+</body>
+</html>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+:root{--green:#153d2b;--green2:#225c40;--lime:#c8f169;--ink:#17241d;--muted:#6c786f;--cream:#f7f8f3;--line:#e4e9e2;--white:#fff;--shadow:0 14px 36px rgba(18,50,34,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font-family:"DM Sans",sans-serif}button,input,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}.site-header{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 max(5vw,20px);border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:11px}.brand-mark{width:43px;height:43px;display:grid;place-items:center;border-radius:13px;background:var(--green);color:var(--lime);font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-1px}.brand strong{display:block;font-family:Manrope,sans-serif;font-size:16px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.cart-button{border:1px solid var(--line);border-radius:12px;background:#fff;padding:10px 13px;display:flex;gap:8px;align-items:center;cursor:pointer;font-weight:700}.cart-button b{background:var(--lime);color:var(--green);border-radius:20px;padding:2px 7px;font-size:12px}.hero{margin:26px auto 0;max-width:1200px;width:90%;min-height:370px;border-radius:27px;background:var(--green);color:#fff;display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;position:relative}.hero-copy{padding:clamp(28px,5vw,65px);align-self:center;position:relative;z-index:1}.eyebrow{font-size:10px;font-weight:800;letter-spacing:2px;color:#8eaa98;margin:0 0 12px}.hero h1{font-family:Manrope,sans-serif;font-size:clamp(32px,4.3vw,53px);letter-spacing:-2px;line-height:1.07;max-width:530px;margin:0 0 18px}.hero-copy>p:not(.eyebrow){max-width:470px;color:#d3e0d7;line-height:1.7;font-size:14px}.primary-link{display:inline-flex;align-items:center;gap:24px;margin-top:18px;padding:14px 18px;background:var(--lime);color:var(--green);font-weight:800;border-radius:10px;font-size:13px}.hero-art{position:relative;min-height:330px;display:grid;place-items:center}.orb{position:absolute;border-radius:50%;background:#2b6a49}.orb-one{width:300px;height:300px;right:8%;top:6%}.orb-two{width:170px;height:170px;background:#3e8059;right:42%;top:44%}.phone-art{height:270px;width:138px;border:7px solid #dce4dd;border-radius:28px;background:#0e1f16;transform:rotate(10deg);z-index:1;box-shadow:0 30px 60px #06160e88;padding:10px;position:relative}.phone-camera{height:17px;width:52px;border-radius:12px;background:#0b140e;margin:0 auto 12px}.phone-screen{height:210px;border-radius:16px;background:linear-gradient(150deg,#d4f77d,#5a9a5e 55%,#173d2b);display:grid;place-items:center;color:#153d2b;font-family:Manrope;font-size:42px;font-weight:800}.hero-tag{position:absolute;right:9%;bottom:12%;z-index:2;background:#fff;color:var(--green);padding:13px 17px;border-radius:12px;box-shadow:var(--shadow);font-size:12px;line-height:1.5;transform:rotate(-4deg)}.hero-tag b{font-size:15px}.trust-row{max-width:1100px;width:88%;margin:24px auto 64px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.trust-row>div{display:flex;align-items:center;gap:12px;padding:16px 18px;border:1px solid var(--line);border-radius:14px}.trust-row>div>span{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#eef5e9;color:var(--green);font-size:20px}.trust-row p{margin:0}.trust-row b,.trust-row small{display:block}.trust-row b{font-size:12px}.trust-row small{font-size:11px;color:var(--muted);margin-top:4px}.catalog-section{max-width:1100px;width:88%;margin:0 auto 70px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:18px}.section-heading h2,.payment-section h2,.delivery-section h2{font-family:Manrope,sans-serif;letter-spacing:-1px;font-size:clamp(24px,3vw,34px);margin:0}.section-heading .eyebrow,.payment-section .eyebrow{color:#789181}.search-box{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:0 12px;height:43px;width:min(280px,45%);color:var(--muted)}.search-box input{border:0;outline:0;width:100%;min-width:0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}.filter{border:1px solid var(--line);background:#fff;border-radius:30px;padding:9px 15px;font-size:12px;cursor:pointer;color:var(--muted)}.filter.active{background:var(--green);border-color:var(--green);color:#fff}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product-card{border:1px solid var(--line);border-radius:17px;overflow:hidden;background:#fff;transition:transform .2s,box-shadow .2s}.product-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.product-visual{height:165px;display:grid;place-items:center;position:relative;overflow:hidden}.product-visual .emoji{font-size:67px;filter:drop-shadow(0 10px 8px #14271b1f)}.product-visual .product-category{position:absolute;top:11px;left:11px;background:#ffffffd9;border-radius:20px;padding:5px 8px;font-size:9px;color:var(--green);font-weight:700}.product-info{padding:15px}.product-info h3{font-size:14px;margin:0 0 7px;line-height:1.4}.product-info p{font-size:11px;color:var(--muted);margin:0;min-height:30px;line-height:1.5}.product-price{font-family:Manrope,sans-serif;font-size:19px;font-weight:800;color:var(--green);margin:14px 0}.product-price small{font:500 10px "DM Sans";color:var(--muted)}.add-button,.primary-button{width:100%;border:0;border-radius:9px;background:var(--green);color:#fff;font-size:12px;font-weight:700;padding:12px;cursor:pointer}.add-button:hover,.primary-button:hover{background:var(--green2)}.demo-note{font-size:11px;color:var(--muted);margin-top:18px}.demo-note code{background:#f1f4ef;padding:3px 5px;border-radius:4px}.payment-section{background:var(--cream);padding:55px max(6vw,22px);display:grid;grid-template-columns:1fr .8fr;gap:55px;align-items:center}.payment-section>div:first-child>p:not(.eyebrow){color:var(--muted);font-size:13px;line-height:1.8;max-width:560px}.payment-card{background:#fff;padding:24px;border-radius:17px;box-shadow:var(--shadow);display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center}.payment-icon{width:40px;height:40px;display:grid;place-items:center;background:#edf6df;color:var(--green);border-radius:12px;font-weight:800}.payment-card b,.payment-card small{display:block}.payment-card b{font-size:13px}.payment-card small{font-size:11px;line-height:1.5;color:var(--muted);margin-top:5px}.payment-divider{grid-column:1/-1;height:1px;background:var(--line);margin:4px 0}.delivery-section{max-width:1100px;width:88%;margin:40px auto;display:flex;align-items:center;gap:18px;padding:24px;border:1px solid var(--line);border-radius:17px}.delivery-icon{font-size:31px;background:#eff5e9;width:60px;height:60px;display:grid;place-items:center;border-radius:15px;flex-shrink:0}.delivery-section h2{font-size:21px}.delivery-section p{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:0}footer{background:#102d20;color:#fff;padding:28px 6%;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer-brand .brand-mark{background:#2c5b40}footer p,footer>small{font-size:11px;color:#c2d0c7}.backdrop{position:fixed;inset:0;background:#0c1b13a6;z-index:10}.hidden{display:none!important}.cart-panel{position:fixed;z-index:11;right:0;top:0;height:100dvh;width:min(440px,100%);background:#fff;box-shadow:-20px 0 60px #0002;transform:translateX(105%);transition:transform .25s ease;display:flex;flex-direction:column;padding:23px}.cart-panel.open{transform:translateX(0)}.cart-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:17px}.cart-head h2{font-family:Manrope;margin:0;font-size:27px}.cart-head .eyebrow{margin-bottom:5px}.icon-button{border:1px solid var(--line);background:#fff;border-radius:9px;width:38px;height:38px;cursor:pointer}.cart-items{overflow:auto;flex:1;padding:12px 0}.empty-cart{color:var(--muted);font-size:13px;text-align:center;padding:25px}.cart-item{display:grid;grid-template-columns:48px 1fr auto;gap:10px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}.cart-emoji{width:46px;height:46px;display:grid;place-items:center;border-radius:10px;background:#f0f5ec;font-size:24px}.cart-item b{display:block;font-size:12px}.cart-item small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{width:23px;height:23px;border:1px solid var(--line);background:#fff;border-radius:6px;cursor:pointer}.cart-item .remove{border:0;background:none;color:#8b4a40;cursor:pointer;font-size:11px}.cart-bottom{border-top:1px solid var(--line);padding-top:15px;max-height:57%;overflow:auto}.cart-total{display:flex;justify-content:space-between;align-items:center}.cart-total span{font-size:12px;color:var(--muted)}.cart-total strong{font:800 22px Manrope;color:var(--green)}.small-note{font-size:10px;color:var(--muted);line-height:1.5}#checkout-form{display:grid;gap:11px}#checkout-form label{display:grid;gap:5px;font-size:11px;font-weight:700}#checkout-form input,#checkout-form textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px;font-size:12px;outline-color:#8cb49a;resize:vertical}.text-button{display:block;margin:10px auto 0;border:0;background:none;color:#8b4a40;font-size:11px;cursor:pointer}
+@media(max-width:760px){.site-header{height:68px}.hero{grid-template-columns:1fr;margin-top:14px;width:calc(100% - 24px);min-height:auto}.hero-copy{padding:30px 25px 8px}.hero h1{font-size:38px}.hero-art{min-height:245px}.phone-art{height:205px;width:112px;border-radius:23px}.phone-screen{height:155px;font-size:33px}.orb-one{width:230px;height:230px;right:12%;top:0}.orb-two{width:110px;height:110px;right:50%;top:48%}.hero-tag{bottom:11%;right:8%}.trust-row{width:calc(100% - 28px);grid-template-columns:1fr;gap:8px;margin:18px auto 45px}.trust-row>div{padding:11px 13px}.catalog-section{width:calc(100% - 28px)}.section-heading{align-items:start;flex-direction:column}.search-box{width:100%}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-visual{height:135px}.product-visual .emoji{font-size:55px}.product-info{padding:12px}.product-info h3{font-size:12px}.product-price{font-size:17px}.payment-section{grid-template-columns:1fr;gap:22px;padding:38px 22px}.delivery-section{width:calc(100% - 28px);align-items:start;padding:17px}.delivery-section h2{font-size:18px}footer{flex-direction:column;align-items:flex-start;gap:12px}.cart-panel{padding:18px}.cart-bottom{max-height:62%}}
+@media(min-width:761px) and (max-width:1000px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-art{min-height:310px}}
+/*
+ * Zenith Móvil — configuración de tienda.
+ * Antes de publicar: confirma precios, disponibilidad, políticas y número de WhatsApp.
+ * Usa el número internacional sin +, espacios ni guiones.
+ */
+const STORE = {
+  name: "Zenith Móvil",
+  currency: "HNL",
+  locale: "es-HN",
+  whatsappNumber: "50493979268",
+  paymentMessage: "Aceptamos transferencia bancaria o depósito. Solicita los datos oficiales y confirma las condiciones antes de pagar."
+};
+
+// Productos de demostración: reemplaza nombres, precios, fotos y disponibilidad antes de publicar.
+const PRODUCTS = [
+  {id:1,name:"Samsung Galaxy S24 Ultra",category:"Teléfonos",description:"Teléfono premium. Consulta colores y almacenamiento.",price:14500,emoji:"📱",bg:"#e9efe4"},
+  {id:2,name:"iPhone 15 Pro Max",category:"Teléfonos",description:"Diseño elegante y alto rendimiento.",price:12000,emoji:"📲",bg:"#f1e8df"},
+  {id:3,name:"Aire acondicionado 12,000 BTU",category:"Electrodomésticos",description:"Consulta voltaje, instalación y disponibilidad.",price:5500,emoji:"❄️",bg:"#e4f1f6"},
+  {id:4,name:"Televisor UHD",category:"Electrónica",description:"Pantalla UHD. Confirma tamaño y modelo.",price:8500,emoji:"📺",bg:"#eae8f4"},
+  {id:5,name:"Samsung Galaxy A Series",category:"Teléfonos",description:"Varias opciones disponibles bajo consulta.",price:3000,emoji:"📱",bg:"#e8edf8"},
+  {id:6,name:"Lavadora",category:"Electrodomésticos",description:"Consulta capacidad, marca y entrega.",price:7000,emoji:"🧺",bg:"#e7f2ed"},
+  {id:7,name:"Consola de videojuegos",category:"Electrónica",description:"Consulta versión, controles y disponibilidad.",price:9500,emoji:"🎮",bg:"#f4e8e6"},
+  {id:8,name:"Accesorios para teléfono",category:"Electrónica",description:"Consulta modelos y compatibilidad.",price:350,emoji:"🎧",bg:"#f5f0dc"}
+];
+
+let cart = [];
+let activeCategory = "Todos";
+const money = value => new Intl.NumberFormat(STORE.locale,{style:"currency",currency:STORE.currency,maximumFractionDigits:0}).format(value).replace("HNL","L");
+const grid = document.getElementById("product-grid");
+const search = document.getElementById("search");
+
+function renderProducts(){
+  const term = search.value.trim().toLocaleLowerCase("es");
+  const list = PRODUCTS.filter(p => (activeCategory==="Todos" || p.category===activeCategory) && (p.name+" "+p.description+" "+p.category).toLocaleLowerCase("es").includes(term));
+  grid.innerHTML = list.length ? list.map(p => `
+    <article class="product-card">
+      <div class="product-visual" style="background:${p.bg}"><span class="product-category">${p.category}</span><span class="emoji" aria-hidden="true">${p.emoji}</span></div>
+      <div class="product-info"><h3>${escapeHtml(p.name)}</h3><p>${escapeHtml(p.description)}</p>
+      <div class="product-price">${money(p.price)} <small>HNL</small></div>
+      <button class="add-button" data-add="${p.id}">Agregar al carrito +</button></div>
+    </article>`).join("") : `<p>No encontramos productos con esa búsqueda.</p>`;
+  grid.querySelectorAll("[data-add]").forEach(btn => btn.addEventListener("click",()=>addToCart(Number(btn.dataset.add))));
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function addToCart(id){const found=cart.find(x=>x.id===id);if(found)found.qty++;else cart.push({id,qty:1});renderCart();openCart();}
+function changeQty(id,delta){const item=cart.find(x=>x.id===id);if(!item)return;item.qty+=delta;if(item.qty<=0)cart=cart.filter(x=>x.id!==id);renderCart();}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);renderCart();}
+function renderCart(){
+  const count=cart.reduce((n,x)=>n+x.qty,0),total=cart.reduce((n,x)=>n+PRODUCTS.find(p=>p.id===x.id).price*x.qty,0);
+  document.getElementById("cart-count").textContent=count;
+  document.getElementById("cart-total").textContent=money(total);
+  const holder=document.getElementById("cart-items");
+  holder.innerHTML=cart.length?cart.map(x=>{const p=PRODUCTS.find(q=>q.id===x.id);return `<div class="cart-item"><div class="cart-emoji">${p.emoji}</div><div><b>${escapeHtml(p.name)}</b><small>${money(p.price)} c/u</small><div class="qty"><button data-minus="${p.id}" aria-label="Restar">−</button><span>${x.qty}</span><button data-plus="${p.id}" aria-label="Sumar">+</button></div></div><button class="remove" data-remove="${p.id}">Quitar</button></div>`}).join(""):`<p class="empty-cart">Tu carrito está vacío.</p>`;
+  holder.querySelectorAll("[data-minus]").forEach(b=>b.addEventListener("click",()=>changeQty(Number(b.dataset.minus),-1)));
+  holder.querySelectorAll("[data-plus]").forEach(b=>b.addEventListener("click",()=>changeQty(Number(b.dataset.plus),1)));
+  holder.querySelectorAll("[data-remove]").forEach(b=>b.addEventListener("click",()=>removeItem(Number(b.dataset.remove))));
+}
+function openCart(){document.getElementById("cart-panel").classList.add("open");document.getElementById("cart-panel").setAttribute("aria-hidden","false");document.getElementById("cart-backdrop").classList.remove("hidden");}
+function closeCart(){document.getElementById("cart-panel").classList.remove("open");document.getElementById("cart-panel").setAttribute("aria-hidden","true");document.getElementById("cart-backdrop").classList.add("hidden");}
+document.getElementById("cart-open").addEventListener("click",openCart);
+document.getElementById("cart-close").addEventListener("click",closeCart);
+document.getElementById("cart-backdrop").addEventListener("click",closeCart);
+document.getElementById("clear-cart").addEventListener("click",()=>{cart=[];renderCart();});
+document.getElementById("checkout-form").addEventListener("submit",e=>{
+  e.preventDefault();
+  if(!cart.length){alert("Agrega al menos un producto al carrito.");return;}
+  if(!STORE.whatsappNumber || STORE.whatsappNumber.includes("CAMBIAR")){alert("Configura el número de WhatsApp en app.js antes de recibir pedidos.");return;}
+  const form=new FormData(e.currentTarget);
+  const lines=cart.map(x=>{const p=PRODUCTS.find(q=>q.id===x.id);return `• ${p.name} x${x.qty}: ${money(p.price*x.qty)}`;});
+  const total=cart.reduce((n,x)=>n+PRODUCTS.find(p=>p.id===x.id).price*x.qty,0);
+  const msg=`Hola, quiero realizar un pedido en ${STORE.name}.\n\n${lines.join("\n")}\n\nTotal estimado: ${money(total)}\n\nNombre: ${form.get("customer")}\nCiudad/departamento: ${form.get("location")}\nDirección/referencia: ${form.get("address")}\n\nForma de pago: transferencia bancaria o depósito. Por favor confirmen disponibilidad, envío y datos oficiales de pago.`;
+  window.open(`https://wa.me/${STORE.whatsappNumber}?text=${encodeURIComponent(msg)}`,"_blank","noopener,noreferrer");
+});
+document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");activeCategory=btn.dataset.category;renderProducts();}));
+search.addEventListener("input",renderProducts);
+document.getElementById("year").textContent=new Date().getFullYear();
+renderProducts();renderCart();
+if("serviceWorker" in navigator && location.protocol.startsWith("http"))window.addEventListener("load",()=>navigator.serviceWorker.register("./service-worker.js").catch(()=>{}));
+const CACHE_NAME = "zenith-movil-v1";
+const CORE = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest", "./assets/icon-192.png", "./assets/icon-512.png"];
+self.addEventListener("install", event => event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(CORE))));
+self.addEventListener("activate", event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k))))));
+self.addEventListener("fetch", event => {
+  if (event.request.method !== "GET" || new URL(event.request.url).origin !== self.location.origin) return;
+  event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
+    const copy = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy)); return response;
+  }).catch(() => caches.match("./index.html"))));
+});
