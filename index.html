@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153d2b">
+  <meta name="description" content="Zenith Móvil: teléfonos, electrónica y electrodomésticos con pedidos por WhatsApp y entrega en Honduras.">
+  <title>Zenith Móvil | Tienda en línea</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Zenith Móvil inicio">
+      <span class="brand-mark">ZM</span>
+      <span><strong>Zenith Móvil</strong><small>Tu tecnología, más cerca</small></span>
+    </a>
+    <button id="cart-open" class="cart-button" aria-label="Abrir carrito">🛒 <span>Carrito</span> <b id="cart-count">0</b></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">TECNOLOGÍA • HOGAR • ACCESORIOS</p>
+        <h1>Encuentra tu próximo favorito.</h1>
+        <p>Explora nuestros productos y realiza tu pedido de forma sencilla. Atención por WhatsApp y entregas coordinadas en Honduras.</p>
+        <a class="primary-link" href="#catalogo">Ver productos <span>→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="phone-art"><div class="phone-camera"></div><div class="phone-screen">ZM</div></div>
+        <div class="hero-tag">Ofertas<br><b>especiales</b></div>
+      </div>
+    </section>
+
+    <section class="trust-row" aria-label="Beneficios">
+      <div><span>✓</span><p><b>Compra fácil</b><small>Agrega al carrito</small></p></div>
+      <div><span>↗</span><p><b>Pedido directo</b><small>WhatsApp disponible</small></p></div>
+      <div><span>⌂</span><p><b>Entrega coordinada</b><small>Consulta cobertura</small></p></div>
+    </section>
+
+    <section id="catalogo" class="catalog-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">CATÁLOGO</p><h2>Productos destacados</h2></div>
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Buscar producto..." aria-label="Buscar producto"></label>
+      </div>
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="Todos">Todos</button>
+        <button class="filter" data-category="Teléfonos">Teléfonos</button>
+        <button class="filter" data-category="Electrodomésticos">Electrodomésticos</button>
+        <button class="filter" data-category="Electrónica">Electrónica</button>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+      <p class="demo-note">Precios y productos de demostración: edita el archivo <code>app.js</code> antes de publicar la tienda.</p>
+    </section>
+
+    <section class="payment-section">
+      <div><p class="eyebrow">FORMAS DE PAGO</p><h2>Pago por transferencia o depósito</h2><p>Al confirmar tu pedido, te compartiremos los datos de pago por WhatsApp. Realiza el depósito únicamente después de verificar los datos oficiales de Zenith Móvil.</p></div>
+      <div class="payment-card"><span class="payment-icon">₱</span><div><b>Transferencia bancaria</b><small>Solicita los datos de cuenta por WhatsApp.</small></div><div class="payment-divider"></div><div><b>Depósito inicial</b><small>Confirma el monto y las condiciones antes de pagar.</small></div></div>
+    </section>
+
+    <section class="delivery-section"><div class="delivery-icon">📦</div><div><h2>¿Necesitas entrega?</h2><p>Indica tu ciudad, departamento y dirección de referencia al realizar tu pedido. La cobertura, el costo y el tiempo de entrega se confirman antes del pago.</p></div></section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#"><span class="brand-mark">ZM</span><span><strong>Zenith Móvil</strong><small>Tu tecnología, más cerca</small></span></a>
+    <p>Atención en línea · Honduras</p>
+    <small>© <span id="year"></span> Zenith Móvil. Todos los derechos reservados.</small>
+  </footer>
+
+  <div id="cart-backdrop" class="backdrop hidden"></div>
+  <aside id="cart-panel" class="cart-panel" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow">TU COMPRA</p><h2>Carrito</h2></div><button id="cart-close" class="icon-button" aria-label="Cerrar carrito">✕</button></div>
+    <div id="cart-items" class="cart-items"><p class="empty-cart">Tu carrito está vacío.</p></div>
+    <div class="cart-bottom">
+      <div class="cart-total"><span>Total estimado</span><strong id="cart-total">L 0</strong></div>
+      <p class="small-note">El total final, envío y disponibilidad se confirmarán por WhatsApp.</p>
+      <form id="checkout-form">
+        <label>Nombre completo<input name="customer" required placeholder="Tu nombre"></label>
+        <label>Ciudad y departamento<input name="location" required placeholder="Ej. Tegucigalpa, F.M."></label>
+        <label>Dirección o referencia<textarea name="address" rows="2" required placeholder="Colonia, calle y punto de referencia"></textarea></label>
+        <button type="submit" class="primary-button">Enviar pedido por WhatsApp</button>
+      </form>
+      <button id="clear-cart" class="text-button">Vaciar carrito</button>
+    </div>
+  </aside>
+  <script src="app.js"></script>
+</body>
+</html>
